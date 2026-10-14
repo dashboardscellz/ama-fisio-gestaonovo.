@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // INÍCIO SEGURO: cliente web não autenticado não pode ler nem gravar dados.
+    // Não substitua por 'allow read, write: if true' para dados de pacientes.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

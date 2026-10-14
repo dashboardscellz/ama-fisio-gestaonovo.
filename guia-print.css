@@ -1,0 +1,26 @@
+@page { size: A4; margin: 18mm 16mm 19mm 16mm; @bottom-right {content: "AMA FISIO • " counter(page) " / " counter(pages); color:#77836c; font-size:9px;} @top-right {content:"GUIA DE INSTALAÇÃO • 2026"; font-size:8px; color:#687965;letter-spacing:.6px} }
+html { font-family: "Lato", "Noto Sans", sans-serif; font-size:10.1pt; color:#253326; line-height:1.38; }
+body { max-width:100%; margin:0; padding:0; }
+h1 { font-size:23pt; line-height:1.13; color:#34482e; font-weight:900; margin:12pt 0 15pt; padding:10pt 0 9pt; border-bottom:4px solid #c5d0bb; }
+h2 { font-size:14.5pt; color:#405538; margin:24pt 0 8pt; break-after:avoid; border-bottom:1px solid #d9dfd0; padding-bottom:5pt; }
+h3 { font-size:11.5pt; color:#405538; margin:13pt 0 6pt; break-after:avoid; }
+p, li { orphans:3; widows:3; }
+p { margin:5pt 0 9pt; }
+hr { border:0; border-top:1px solid #dae0d4; margin:16pt 0; }
+strong { color:#2f4430; }
+a { color:#35664c; text-decoration:none; overflow-wrap:anywhere; }
+ol,ul { padding-left:19pt; margin:4pt 0 9pt; }
+li { padding-left:1pt; margin:2.5pt 0; }
+blockquote { margin:12pt 0 14pt; border-left:4px solid #859a74; background:#eff3eb; padding:9pt 11pt; font-size:9.8pt; }
+blockquote p { margin:0 0 4pt; }
+pre { background:#f4f6f2; color:#233b2b; border:1px solid #dfe5db; border-radius:5px; padding:9pt; font-family:"DejaVu Sans Mono", monospace; white-space:pre-wrap; overflow-wrap:anywhere; font-size:8.05pt; line-height:1.38; break-inside:avoid; }
+code { font-family:"DejaVu Sans Mono", monospace; font-size:8.6pt; color:#2c5437; overflow-wrap:anywhere; }
+pre code { font-size:inherit; }
+table { width:100%; border-collapse:collapse; margin:12pt 0; font-size:8.7pt; break-inside:auto; }
+th { background:#e7ede2; color:#365036; text-align:left; font-weight:bold; padding:7pt 6pt; }
+td { padding:6pt; border-bottom:1px solid #dce3d7; vertical-align:top; }
+tr { break-inside:avoid; }
+img { max-width:95%; height:auto; object-fit:contain; margin:9pt auto 6pt; display:block; border:1px solid #d9e0d4; border-radius:5px; }
+p > em:only-child { display:block; text-align:center; color:#778373; font-size:8.6pt; }
+input[type="checkbox"] { margin-right:6px; }
+header#title-block-header { display:none; }
