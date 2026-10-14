@@ -1,4 +1,4 @@
-# AMA FISIO — Cadastro e anamnese (versão 3)
+# AMA FISIO — Anamnese e impressão (versão 3.1)
 
 ## O que mudou
 
@@ -38,3 +38,24 @@ O áudio original foi identificado, mas **não foi possível obter uma transcri�
 - `firebase-config.js`: identificação pública do novo projeto (sem uso de Firestore para dados nesta versão).
 - `firestore.rules`: regras de bloqueio do banco.
 - `assets/logo.webp`: logo fornecida.
+
+
+## Novo: imprimir ficha e evolução (v3.1)
+
+- Em **Anamnese**, encontre o paciente e clique **🖨 Imprimir ficha** para imprimir o cadastro e os campos clínicos preenchidos.
+- Clique **🖨 Imprimir evoluções** para gerar todo o histórico de evoluções salvo. Se não houver evolução, o site avisará.
+- Dentro da ficha existente, também há o botão **Imprimir ficha salva**. Salve alterações antes de imprimir.
+- Dentro de **Evoluções**, pode imprimir o histórico completo ou somente uma evolução específica.
+- O documento sai em **A4**, com logo, identificação, datas, campos preenchidos e espaço para assinatura do profissional.
+- A janela de impressão do navegador permite imprimir em papel ou **Salvar como PDF**. Não são enviados e-mails e não é necessária outra ferramenta.
+- Para testes, utilize apenas dados fictícios. Imprimir/salvar PDF com dados clínicos reais exige cuidados adicionais de privacidade e proteção física dos documentos.
+
+### Atualização do GitHub
+
+Faça antes um backup em **Configurações → Baixar backup criptografado**. Extraia o ZIP e envie **os arquivos de dentro da pasta** para a **raiz do mesmo repositório** pelo botão **Add file → Upload files**. Confirme o commit e atualize o site com `Ctrl + Shift + R`. Não mude as regras do Firebase.
+
+### Ideias simples para uma próxima melhoria
+
+1. Mostrar a idade calculada automaticamente ao lado da data de nascimento no cadastro (já aparece na ficha impressa).
+2. Colocar um campo opcional de **retorno sugerido** após registrar uma evolução.
+3. Acrescentar um campo simples **Próxima sessão** no final da evolução, sem criar novos módulos.
