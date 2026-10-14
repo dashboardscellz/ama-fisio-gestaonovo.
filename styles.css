@@ -12,3 +12,11 @@ dialog:has(.clinical-section)>form{max-height:none}dialog:has(.clinical-section)
 
 /* Acoes de impressao - claras e acessiveis em celular */
 .btn.print-btn{background:#f2f6ed;border:1px solid #c5d3bd;color:#3b5836;font-weight:750}.btn.print-btn:hover{background:#e8f0e2}.modal-print-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:4px 0 14px}.evolution-card .print-btn{margin:8px 0 2px}.table-actions .print-btn{white-space:nowrap}
+
+/* seletor de paciente por digitação */
+.pickwrap{position:relative}
+.pick-list{position:absolute;left:0;right:0;top:100%;z-index:20;background:#fff;border:1px solid #cfd8c8;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.14);max-height:260px;overflow:auto;margin-top:4px}
+.pick-item{display:block;width:100%;text-align:left;padding:11px 14px;background:none;border:0;border-bottom:1px solid #eef1ea;font:inherit;cursor:pointer}
+.pick-item:last-child{border-bottom:0}.pick-item:hover,.pick-item:focus{background:#eef3ea}
+.pick-empty{padding:11px 14px;color:#6b7766;font-size:14px}
+.input.picked{border-color:#4a5b41;background:#f4f8f1}
