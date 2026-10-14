@@ -1,6 +1,6 @@
-/* AMA FISIO — identificadores públicos do novo projeto Firebase.
- * Este arquivo NÃO guarda senha. Não autoriza acesso ao Firestore.
- * Os cadastros permanecem criptografados e armazenados no navegador.
+/* AMA FISIO — identificadores públicos do projeto Firebase.
+ * Este arquivo NÃO guarda senha. Quem protege os dados são o Firebase Authentication
+ * e as regras do Firestore (firestore.rules), mais a criptografia feita no navegador.
  */
 window.AMA_FIREBASE_CONFIG = Object.freeze({
   apiKey: "AIzaSyApaJVFifxpeJZxYx274hkgiC8Jh7ZiXmc",

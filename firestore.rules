@@ -1,8 +1,28 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // INÍCIO SEGURO: cliente web não autenticado não pode ler nem gravar dados.
-    // Não substitua por 'allow read, write: if true' para dados de pacientes.
+
+    // O site não usa login do Firebase: o login é feito dentro do site.
+    // Tudo que fica aqui já está CRIPTOGRAFADO no navegador (AES-GCM); sem a senha de um usuário, é ilegível.
+    // As regras abaixo limitam o que o site pode fazer: um único documento, nunca apagar,
+    // e cada gravação precisa ser exatamente a versão seguinte (impede sobrescrever versão antiga).
+
+    match /clinica/cofre {
+      allow read: if true;
+      allow create: if request.resource.data.rev == 1
+                    && request.resource.data.keys().hasOnly(['version','users','vault','rev','updatedAt']);
+      allow update: if request.resource.data.rev == resource.data.rev + 1
+                    && request.resource.data.keys().hasOnly(['version','users','vault','rev','updatedAt']);
+      allow delete: if false;
+    }
+
+    // Histórico circular das últimas 20 versões (somente gravação pelo site; leitura só pelo console).
+    match /clinica_hist/{slot} {
+      allow read: if false;
+      allow create, update: if request.resource.data.keys().hasOnly(['version','users','vault','rev','updatedAt']);
+      allow delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

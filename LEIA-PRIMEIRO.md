@@ -1,3 +1,5 @@
+> **v4 — Firebase:** salvamento automático na nuvem ativado. Leia **FIREBASE-SINCRONIZACAO.md** antes de publicar. As seções abaixo sobre “apenas no navegador” descrevem a versão anterior.
+
 # AMA FISIO — Anamnese e impressão (versão 3.1)
 
 ## O que mudou
